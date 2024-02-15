@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<style>
+    /* Additional custom styles */
+    .registration-details-container {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .registration-details p {
+        margin-bottom: 10px;
+    }
+
+    .registration-details strong {
+        color: #007bff;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Registration Details</h1>
+        <div id="registrationDetails" class="mt-3 registration-details-container">
+        </div>
+    </div>
+
+    <script>
+        // Retrieve form data from localStorage
+        var formData = JSON.parse(localStorage.getItem('formData'));
+
+        // Display form data
+        var registrationDetails = document.getElementById('registrationDetails');
+        registrationDetails.innerHTML = `
+            <p><strong>Name:</strong> ${formData.name}</p>
+            <p><strong>Email:</strong> ${formData.email}</p>
+            <p><strong>Gender:</strong> ${formData.gender}</p>
+            <p><strong>Class:</strong> ${formData.class}</p>
+            <p><strong>Division:</strong> ${formData.division}</p>
+            <p><strong>College Name:</strong> ${formData.college}</p>
+            <p><strong>Subjects:</strong> ${formData.subjects}</p>
+            <p><strong>Department:</strong> ${formData.department}</p>
+            <p><strong>Address:</strong> ${formData.address}</p>
+            <p><strong>Mobile Number:</strong> ${formData.mobileNumber}</p>
+        `;
+    </script>
+</body>
+
+</html>
