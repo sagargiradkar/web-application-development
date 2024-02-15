@@ -23,69 +23,76 @@
   <div class="container">
     <br />
 
-    <div class="col-lg-5 m-auto d-block">
-      <form id="registrationForm" action="#" onsubmit="return validation()" class="bg-light">
-        <div class="form-group">
-          <label for="name" class="font-weight-regular"> Name </label>
-          <input type="text" name="name" class="form-control" id="name" autocomplete="off" />
-          <span id="Name" class="text-danger font-weight-regular"> </span>
-        </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <form id="registrationForm" action="#" onsubmit="return validation()" class="bg-light">
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"> Name </label>
+            <input type="text" name="name" class="form-control" id="name" autocomplete="off" />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
 
-        <div class="form-group">
-          <label class="font-weight-regular"> Email </label>
-          <input type="text" name="email" class="form-control" id="emails" autocomplete="off" />
-          <span id="emailids" class="text-danger font-weight-regular"> </span>
-        </div>
+          <div class="form-group">
+            <label class="font-weight-regular"> Email </label>
+            <input type="text" name="email" class="form-control" id="emails" autocomplete="off" />
+            <span id="emailids" class="text-danger font-weight-regular"> </span>
+          </div>
 
-        <div class="form-group">
-          <label for="user" class="font-weight-regular"> Username </label>
-          <input type="text" name="user" class="form-control" id="user" autocomplete="off" />
-          <span id="username" class="text-danger font-weight-regular"> </span>
-        </div>
+          <div class="form-group">
+            <label for="user" class="font-weight-regular"> Username </label>
+            <input type="text" name="user" class="form-control" id="user" autocomplete="off" />
+            <span id="username" class="text-danger font-weight-regular"> </span>
+          </div>
 
-        <div class="form-group">
-          <label class="font-weight-regular"> Password </label>
-          <input type="password" name="pass" class="form-control" id="pass" autocomplete="off" />
-          <span id="passwords" class="text-danger font-weight-regular">
-          </span>
-        </div>
+          <div class="form-group">
+            <label class="font-weight-regular"> Password </label>
+            <input type="password" name="pass" class="form-control" id="pass" autocomplete="off" />
+            <span id="passwords" class="text-danger font-weight-regular">
+            </span>
+          </div>
 
-        <div class="form-group">
-          <label class="font-weight-regular"> Confirm Password </label>
-          <input type="password" name="conpass" class="form-control" id="conpass" autocomplete="off" />
-          <span id="confrmpass" class="text-danger font-weight-regular">
-          </span>
-        </div>
+          <div class="form-group">
+            <label class="font-weight-regular"> Confirm Password </label>
+            <input type="password" name="conpass" class="form-control" id="conpass" autocomplete="off" />
+            <span id="confrmpass" class="text-danger font-weight-regular">
+            </span>
+          </div>
 
-        <div class="form-group">
-          <label class="font-weight-regular"> Mobile Number </label>
-          <input type="text" name="mobile" class="form-control" id="mobileNumber" autocomplete="off" />
-          <span id="mobileno" class="text-danger font-weight-regular"> </span>
-        </div>
+          <div class="form-group">
+            <label class="font-weight-regular"> Mobile Number </label>
+            <input type="text" name="mobile" class="form-control" id="mobileNumber" autocomplete="off" />
+            <span id="mobileno" class="text-danger font-weight-regular"> </span>
+          </div>
 
-        <div class="form-group">
-          <label for="gender" class="font-weight-regular">Gender</label>
-          <select name="gender" id="gender" class="form-control">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
+          <div class="form-group">
+            <label for="gender" class="font-weight-regular">Gender</label>
+            <select name="gender" id="gender" class="form-control">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
 
-        <div class="form-group">
-          <label for="class" class="font-weight-regular">Class</label>
-          <select name="class" id="class" class="form-control">
-            <option value="first">First</option>
-            <option value="second">Second</option>
-            <!-- Add more options as needed -->
-          </select>
-        </div>
+          <div class="form-group">
+            <label for="class" class="font-weight-regular">Class</label>
+            <select name="class" id="class" class="form-control">
+              <option value="first">First</option>
+              <option value="second">Second</option>
+              <option value="third">Third</option>
+              <option value="fourth">Forth</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+      </div>
 
+      <div class="col-lg-6">
         <div class="form-group">
           <label for="division" class="font-weight-regular">Division</label>
           <select name="division" id="division" class="form-control">
             <option value="a">A</option>
             <option value="b">B</option>
+            <option value="c">C</option>
+            <option value="d">D</option>
             <!-- Add more options as needed -->
           </select>
         </div>
@@ -93,8 +100,11 @@
         <div class="form-group">
           <label for="college" class="font-weight-regular">College Name</label>
           <select name="college" id="college" class="form-control">
-            <option value="college1">College 1</option>
-            <option value="college2">College 2</option>
+            <option value="college1">COEP Pune</option>
+            <option value="college2">PICT Pune</option>
+            <option value="college3">VIT Pune</option>
+            <option value="college4">PVGCOET Pune</option>
+
             <!-- Add more options as needed -->
           </select>
         </div>
@@ -126,9 +136,10 @@
         <input type="reset" name="reset" value="Reset" class="btn btn-secondary" autocomplete="off" />
         <!-- &emsp;&emsp;&emsp;Already have an account? -->
         <!-- <a href="login.html">Login</a> -->
-      </form>
+        </form>
 
-      <br /><br />
+        <br /><br />
+      </div>
     </div>
   </div>
 
