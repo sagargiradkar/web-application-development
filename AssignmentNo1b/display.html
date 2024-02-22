@@ -9,10 +9,13 @@
     <style>
         /* Additional custom styles */
         .registration-details-container {
-            background-color: #f8f9fa;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .registration-details {
+            padding: 15px;
         }
 
         .registration-details p {
@@ -29,6 +32,24 @@
     <div class="container">
         <h1 class="text-center mt-5">Registration Details</h1>
         <div id="registrationDetails" class="mt-3 registration-details-container">
+            <div class="row registration-details">
+                <div class="col-md-6">
+                    <!-- Left Column -->
+                    <p><strong>Name:</strong> ${formData.name}</p>
+                    <p><strong>Email:</strong> ${formData.email}</p>
+                    <p><strong>Gender:</strong> ${formData.gender}</p>
+                    <p><strong>Class:</strong> ${formData.class}</p>
+                    <p><strong>Division:</strong> ${formData.division}</p>
+                </div>
+                <div class="col-md-6">
+                    <!-- Right Column -->
+                    <p><strong>College Name:</strong> ${formData.college}</p>
+                    <p><strong>Subjects:</strong> ${formData.subjects}</p>
+                    <p><strong>Department:</strong> ${formData.department}</p>
+                    <p><strong>Address:</strong> ${formData.address}</p>
+                    <p><strong>Mobile Number:</strong> ${formData.mobileNumber}</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -39,17 +60,23 @@
         // Display form data
         var registrationDetails = document.getElementById('registrationDetails');
         registrationDetails.innerHTML = `
-            <div class="registration-details">
-                <p><strong>Name:</strong> ${formData.name}</p>
-                <p><strong>Email:</strong> ${formData.email}</p>
-                <p><strong>Gender:</strong> ${formData.gender}</p>
-                <p><strong>Class:</strong> ${formData.class}</p>
-                <p><strong>Division:</strong> ${formData.division}</p>
-                <p><strong>College Name:</strong> ${formData.college}</p>
-                <p><strong>Subjects:</strong> ${formData.subjects}</p>
-                <p><strong>Department:</strong> ${formData.department}</p>
-                <p><strong>Address:</strong> ${formData.address}</p>
-                <p><strong>Mobile Number:</strong> ${formData.mobileNumber}</p>
+            <div class="row registration-details">
+                <div class="col-md-6">
+                    <!-- Left Column -->
+                    <p><strong>Name:</strong> ${formData.name}</p>
+                    <p><strong>Email:</strong> ${formData.email}</p>
+                    <p><strong>Gender:</strong> ${formData.gender}</p>
+                    <p><strong>Class:</strong> ${formData.class}</p>
+                    <p><strong>Division:</strong> ${formData.division}</p>
+                </div>
+                <div class="col-md-6">
+                    <!-- Right Column -->
+                    <p><strong>College Name:</strong> ${formData.college}</p>
+                    <p><strong>Subjects:</strong> ${formData.subjects}</p>
+                    <p><strong>Department:</strong> ${formData.department}</p>
+                    <p><strong>Address:</strong> ${formData.address}</p>
+                    <p><strong>Mobile Number:</strong> ${formData.mobileNumber}</p>
+                </div>
             </div>
         `;
     </script>
