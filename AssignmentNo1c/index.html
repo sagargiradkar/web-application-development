@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Local File Contents</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+    $("#loadFileBtn").click(function(){
+        $.ajax({
+            url: "index.txt",
+            dataType: "text",
+            success: function(data){
+                // Split the text by line breaks and add proper HTML line break tags
+                var lines = data.split("\n");
+                var formattedText = "";
+                for (var i = 0; i < lines.length; i++) {
+                    formattedText += lines[i] + "<br>";
+                }
+                $("#fileContents").html(formattedText); // Display the formatted text
+            },
+            error: function(xhr, status, error){
+                console.error("Error loading file:", error);
+            }
+        });
+    });
+});
+
+    </script>
+</head>
+<body>
+    <button id="loadFileBtn">Load File</button>
+    <div id="fileContents"></div>
+</body>
+</html>
