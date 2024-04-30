@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    jquery Ajax Get Method
+ </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.get("simple.txt", function(data, status){
+    
+    document.getElementById("dis").innerText=data;
+
+    });
+  });
+});
+
+
+
+
+</script>
+<style>
+    #dis{
+        border: 3px solid black;
+        background-color:coral;
+        height: 500px;
+        font-size: larger;
+        
+    }
+</style>
+</head>
+<body>
+<h1>jquery Ajax</h1>
+<button>Get</button>
+
+<p id="dis"></p>
+
+
+</body>
+</html>

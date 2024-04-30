@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery From</title>
+    <style>
+        body {
+            background-image: url("https://m.media-amazon.com/images/I/41tRTl-dSjL.jpg");
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        form {
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=phone],
+        input[type=address] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type=text]:focus,
+        input[type=email]:focus,
+        input[type=phone]:focus,
+        input[type=address]:focus {
+            background-color: #e6e6e6;
+        }
+
+        input[type=button] {
+            background-color: #333;
+            color: #fff;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type=reset] {
+            background-color: #333;
+            color: #fff;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type=button]:hover {
+            background-color: blue;
+        }
+
+        input[type=reset]:hover {
+            background-color: rgb(250, 135, 155);
+        }
+
+        label {
+            font-size: 18px;
+            color: #666;
+        }
+
+        label span {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <h1>Registration Form</h1>
+
+            <label for="username"><b>Name</b></label>
+            <input type="text" placeholder="Enter Username" name="username" id="Name" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" id="Email" required>
+
+            <label for="phone"><b>Phone Number</b></label>
+            <input type="phone" placeholder="Enter your Phone no" name="phone" id="Phone" required>
+
+            <label for="address"><b>Address to deliver the order</b></label>
+            <input type="text" placeholder="Enter Addess" name="Addess" id="address" required>
+
+            <label for="grocery"><b>Grocery List</b></label>
+		    <textarea id="Grocery" name="grocery" rows="5" required style="width: 100%;"></textarea>
+
+            <!-- <button type="submit">Register</button> -->
+            <input type="button" class="btn btn-success" value="Submit" onclick="saveFormData()"> 
+			<input type="reset" class="btn btn-success" value="Reset">
+        </form>
+    </div>
+    <script>
+        function saveFormData(){
+            const formData={
+                username: document.getElementById("Name").value,
+                email: document.getElementById("Email").value,
+                phone: document.getElementById("Phone").value,
+                Address: document.getElementById("address").value,
+                grocery: document.getElementById("Grocery").value,
+            };
+            localStorage.setItem("formData",JSON.stringify(formData));
+            window.location.href="display.html";    //Display
+        }
+    </script>
+</body>
+
+</html>

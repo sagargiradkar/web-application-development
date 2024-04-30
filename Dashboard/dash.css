@@ -1,0 +1,14 @@
+*{
+    background-color: black;
+}
+
+h1 ,p,th,tr,h3{
+    color: white;
+}
+
+.sidebar{
+    background-color: white;
+}
+img{
+    width: 418px;
+}

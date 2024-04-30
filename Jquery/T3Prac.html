@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feeback Form</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>PVG's COET Pune</h1>
+            <h2>Feedback Form</h2>
+        </div>
+    <div>
+        <center>
+            <form>
+                <br>
+                <label for="qot">Quality of Teaching</label>
+                <select name="qot" id="qot" data-role="slider">
+                    <option value="good">Good</option>
+                    <option value="bad">Bad</option>
+                </select>
+                <br>
+                <label for="cm">Course Material</label>
+                <select name="cm" id="cm" data-role="slider">
+                    <option value="good">Good</option>
+                    <option value="bad">Bad</option>
+                </select>
+                <br>
+                <label for="cs">Class Size</label>
+                <select name="cs" id="cs" data-role="slider">
+                    <option value="good">Good</option>
+                    <option value="bad">Bad</option>
+                </select>
+                <br>
+                <label for="cf">Campus facilities</label>
+                <select name="cf" id="cf" data-role="slider">
+                    <option value="good">Good</option>
+                    <option value="bad">Bad</option>
+                </select>
+                <br>
+                <label for="as">Academic Support</label>
+                <select name="as" id="as" data-role="slider">
+                    <option value="good">Good</option>
+                    <option value="bad">Bad</option>
+                </select>
+                <br>
+                <label for="jo">Job Opportunities</label>
+                <select name="jo" id="jo" data-role="slider">
+                    <option value="good">Good</option>
+                    <option value="bad">Bad</option>
+                </select>
+                <br>
+                <label for="os">Overall Satisfaction</label>
+                <select name="os" id="os" data-role="slider">
+                    <option value="good">Good</option>
+                    <option value="bad">Bad</option>
+                </select><br>
+                <button style="background-color: black; color: white; width: 50%; margin: 2%;" onclick="SaveFormData()">SUBMIT</button>
+            </form>
+        </center>
+    </div>
+</div>
+
+<script>
+    function SaveFormData(){
+        const FormData={
+            qot:document.getElementById('qot').value,
+            cm: document.getElementById('cm').value,
+            cs: document.getElementById('cs').value,
+            cf: document.getElementById('cf').value,
+            as: document.getElementById('as').value,
+            jo: document.getElementById('jo').value,
+            os: document.getElementById('os').value
+        };
+        localStorage.setItem('FormData',JSON.stringify(FormData));
+    }
+</script>
+</body>
+</html>

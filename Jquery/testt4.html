@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<style>
+		.cards{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			margin: 3PX;
+		}
+		.card{
+			background-color: rgb(134, 189, 238);
+			padding: 6px;
+		}
+
+	</style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div data-role="page">
+      <div data-role="header"><h1>Shopping Cart</h1></div>
+      <div class="cards">
+        <div class="card">
+          <h2>Item 1</h2>
+          <button onclick="item1()">Add To Cart</button>
+        </div>
+        <div class="card">
+          <h2>Item 2</h2>
+          <button onclick="item2()">Add To Cart</button>
+        </div>
+        <div class="card">
+          <h2>Item 3</h2>
+          <button onclick="item3()">Add To Cart</button>
+        </div>
+        <div class="card">
+          <h2>Item 4</h2>
+          <button onclick="item4()">Add To Cart</button>
+        </div>
+        <div class="card">
+          <h2>Item 5</h2>
+          <button onclick="item5()">Add To Cart</button>
+        </div>
+		<a href="#add"><button>View Cart</button></a>
+      </div>
+    </div>
+    <div data-role="page" id="add">
+		<table id="disp">
+			<th>
+				<td>Item</td>
+			</th>
+		</table>
+	</div>
+
+	<script>
+		var dis=""
+		function item1(){
+			
+			dis+="<tr><td>Item1</td></tr>"
+			document.getElementById("disp").innerHTML=dis;
+			
+		}
+		function item2(){
+			dis+="<tr><td>Item2</td></tr>"
+			document.getElementById("disp").innerHTML=dis;
+		}
+		function item3(){
+			dis+="<tr><td>Item3</td></tr>"
+			document.getElementById("disp").innerHTML=dis;
+		}
+		function item4(){
+			dis+="<tr><td>Item4</td></tr>"
+			document.getElementById("disp").innerHTML=dis;
+		}
+		function item5(){
+			dis+="<tr><td>Item5</td></tr>"
+			document.getElementById("disp").innerHTML=dis;
+		}
+	</script>
+  </body>
+</html>

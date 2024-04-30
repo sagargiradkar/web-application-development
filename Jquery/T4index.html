@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-commerce App</title>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <style>
+    .item {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div data-role="page" id="home">
+    <div data-role="header">
+      <h1>E-commerce App</h1>
+    </div>
+    <div data-role="content">
+      <div class="item">
+        <h3>Item 1</h3>
+        <p>Description of Item 1.</p>
+        <a href="#" class="add-to-cart" data-item="Item 1">Add to Cart</a>
+      </div>
+      <div class="item">
+        <h3>Item 2</h3>
+        <p>Description of Item 2.</p>
+        <a href="#" class="add-to-cart" data-item="Item 2">Add to Cart</a>
+      </div>
+      <div class="item">
+        <h3>Item 3</h3>
+        <p>Description of Item 3.</p>
+        <a href="#" class="add-to-cart" data-item="Item 3">Add to Cart</a>
+      </div>
+      <a href="#cart" data-role="button">View Cart</a>
+    </div>
+  </div>
+
+  <div data-role="page" id="cart">
+    <div data-role="header">
+      <h1>Cart</h1>
+      <a href="#home" data-rel="back" data-icon="back">Back</a>
+    </div>
+    <div data-role="content">
+      <ul data-role="listview" id="cart-list"></ul>
+      <a href="#home" data-role="button">Continue Shopping</a>
+    </div>
+  </div>
+
+  <script>
+    $(document).on('pageinit', '#home', function() {
+      $('.add-to-cart').on('click', function(e) {
+        e.preventDefault();
+        var item = $(this).data('item');
+        addToCart(item);
+        alert(item + ' added to cart!');
+      });
+
+      function addToCart(item) {
+        var cartItem = $('<li>' + item + '</li>');
+        $('#cart-list').append(cartItem);
+        $('#cart-list').listview('refresh');
+      }
+    });
+  </script>
+</body>
+</html>

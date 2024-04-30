@@ -1,0 +1,20 @@
+ <div class="wrapper">
+      <div class="title">Register</div>
+      <form action="#">
+        <div class="field">
+          <input type="text" name="userName" required="" [(ngModel)]="signupObj.userName">
+          <label>User Name</label>
+        </div>
+        <div class="field">
+          <input type="email" name="email" required="" [(ngModel)]="signupObj.email">
+          <label>Email address</label>
+        </div>
+        <div class="field">
+          <input type="password" name="password" required="" [(ngModel)]="signupObj.password">
+          <label>Password</label>
+        </div>
+        <div class="field">
+          <input type="button" (click)="onSignUp()" value="Register">
+        </div>
+      </form>
+    </div>
